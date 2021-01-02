@@ -20,9 +20,10 @@ accumulate_by <- function(dat, var) {
   })
   dplyr::bind_rows(dats)
 }
-### 
 
-    ###
+data <- data %>% accumulate_by(~tmp_date)
+### 
+###
 data %>%
   plot_ly(
     x = ~tmp_date, 
