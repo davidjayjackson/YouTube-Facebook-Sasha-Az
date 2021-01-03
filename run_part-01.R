@@ -7,9 +7,9 @@ library(plotly)
 
 #part 1:
 
-data <- data %>%
-  mutate(tmp_date = as.numeric(as.Date(date_decision_made, format = "%Y-%m-%d")))
-##
+data <- data %>% rename(tmp_date = date_decision_made)
+# mutate(tmp_date = as.numeric(as.Date(date_decision_made, format = "%Y-%m-%d")))
+## = 
 ### Code is hanging on this function
 ##
 accumulate_by <- function(dat, var) {
